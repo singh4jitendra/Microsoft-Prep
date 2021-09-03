@@ -1,0 +1,25 @@
+
+1. Design APIs for producer consumer problem - extended to multiple consumers
+2. Design URL Shortner service: 
+3. Design File storage Service like S3.
+4. Design a Job schedular => 
+    - scalability, fault tolerance, high availability, 
+    - how scheduler picks up job? 
+    - how will you take care where one job can run for 30 min and one for 30 hour?
+    - how will you distribute jobs on servers ?
+    - Based on frequency & time how will you execute them ? 
+    - How will you notify back the user about start/stop or completion of a job ? 
+    - How will your system know if a job is killed / terminated due to unknown reasons ?
+
+5.Design a distributed LRU Cache.
+6. Design a concurrent Hashmap
+7. Write a custom lock without using synchronization key word.
+
+8. Design a User Level Threading Library: 
+    - https://leetcode.com/discuss/interview-question/operating-system/228142/Design-a-User-Level-Threading-Library
+9. Implement your own spinlock
+    -   https://leetcode.com/discuss/interview-question/operating-system/134290/Implement-your-own-spinlock
+    -   volatile int lock = 0;
+        spin_lock(volatile int *lock) {
+        while(test_and_set(*lock) == 1);
+        }
