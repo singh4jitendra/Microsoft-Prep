@@ -10,6 +10,9 @@
     - Based on frequency & time how will you execute them ? 
     - How will you notify back the user about start/stop or completion of a job ? 
     - How will your system know if a job is killed / terminated due to unknown reasons ?
+    
+    design refs: https://captionstrendupdategb.blogspot.com/2021/04/system-design-job-scheduler.html
+    
 
 5.Design a distributed LRU Cache.
 6. Design a concurrent Hashmap
@@ -23,3 +26,5 @@
         spin_lock(volatile int *lock) {
         while(test_and_set(*lock) == 1);
         }
+10. Design distributed lock.
+11. Design distributed logging system.
