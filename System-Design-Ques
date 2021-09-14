@@ -12,6 +12,7 @@
     - How will your system know if a job is killed / terminated due to unknown reasons ?
     
     design refs: https://captionstrendupdategb.blogspot.com/2021/04/system-design-job-scheduler.html
+    https://tianpan.co/notes/182-designing-l7-load-balancer
     
 
 5.Design a distributed LRU Cache.
