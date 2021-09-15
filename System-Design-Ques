@@ -15,7 +15,7 @@
     https://tianpan.co/notes/182-designing-l7-load-balancer
     
 
-5.Design a distributed LRU Cache.
+5. Design a distributed LRU Cache. Also Low level design and implement cache which expires with time.
 6. Design a concurrent Hashmap
 7. Write a custom lock without using synchronization key word.
 
@@ -29,3 +29,33 @@
         }
 10. Design distributed lock.
 11. Design distributed logging system.
+12. Design own malloc
+13. Designing Memcached or an in-memory KV store.
+14. Design tic tac toe
+15. Design sizeof()
+16. Design mmap()
+17. Design random number generator
+18. Design a Logging mechanism. Should be thread safe.
+19. Implementing a fair mutex:
+            class fair_mutex : public sc_mutex
+            {
+                std::queue<sc_process_handle> s_queue;
+            public:
+                virtual int
+                    lock()
+                {
+
+                    if (m_owner == sc_get_current_process_handle()) return 0;
+
+                    s_queue.push(sc_get_current_process_handle());
+                    while (s_queue.front() != sc_get_current_process_handle() || in_use()) {
+                        sc_core::wait(m_free);
+                    }
+                    m_owner = sc_get_current_process_handle();
+                    s_queue.pop();
+                    return 0;
+
+                }
+
+            };
+
