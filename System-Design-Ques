@@ -59,3 +59,6 @@
 
             };
 
+20. Design logging :
+        - How you are going to initialize the Logger when the Application starts(eg. singleton instance or new object each time)?
+        - Concurrency while writing logs via multiple threads.
